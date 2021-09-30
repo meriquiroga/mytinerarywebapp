@@ -1,0 +1,43 @@
+{
+  "name": "mytinerary-quiroga",
+  "version": "1.0.0",
+  "description": "MyTinerary project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meriquiroga/mytinerary-quiroga.git"
+  },
+  "keywords": [
+    "itinerary",
+    "travel",
+    "cities",
+    "trip\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+    "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+    "\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D",
+    "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[3~\u001b[3~",
+    "travel",
+    "cities",
+    "trip"
+  ],
+  "author": "Mariangeles Quiroga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meriquiroga/mytinerary-quiroga/issues"
+  },
+  "homepage": "https://github.com/meriquiroga/mytinerary-quiroga#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
+  }
+}
