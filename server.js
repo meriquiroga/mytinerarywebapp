@@ -3,9 +3,10 @@ const cors = require('cors')
 const passport = require('passport')
 const router = require('./routes/index')
 require('dotenv').config()
+const path = require('path')
+
 require('./config/dataBase')
 require('./config/passport')
-
 
 const app = express()
 
@@ -15,4 +16,11 @@ app.use(express.json())
 
 app.use('/api', router)
 
-app.listen(4000, console.log('Server escuchando'))
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'))
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname+"/client/build/index.html"))
+    })
+}
+
+app.listen(process.env.PORT || 4000, process.env.HOST || '0.0.0.0', () => console.log('Server listening'))

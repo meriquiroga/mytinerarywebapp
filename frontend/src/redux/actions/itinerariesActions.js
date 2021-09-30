@@ -3,7 +3,7 @@ import axios from 'axios'
 const itinerariesActions = {
     getItineraries: (id) => {
         return async (dispatch, getState) => {
-            let response = await axios.get('http://localhost:4000/api/itineraries/' + id)
+            let response = await axios.get('https://mytinerarywebapp.herokuapp.com/api/itineraries/' + id)
             if (!response.data.success) {
                 throw new Error ("There´s been a conection error")
             }
@@ -16,7 +16,7 @@ const itinerariesActions = {
         return async (dispatch, getState) => {
             //Le pido al backend que me valide el token
             try {
-                let response = await axios.put(`http://localhost:4000/api/likes/${itineraryId}`, {},
+                let response = await axios.put(`https://mytinerarywebapp.herokuapp.com/api/likes/${itineraryId}`, {},
                 {
                 headers: {
                     Authorization: 'Bearer ' + token,
@@ -37,7 +37,7 @@ const itinerariesActions = {
         return async (dispatch, getState) => {
               //Le pido al backend que me valide el token
             try {
-                let response = await axios.post(`http://localhost:4000/api/comments/${id}`, comment, 
+                let response = await axios.post(`https://mytinerarywebapp.herokuapp.com/api/comments/${id}`, comment, 
                 {
                 headers: {
                     Authorization: 'Bearer ' + token,
@@ -49,39 +49,6 @@ const itinerariesActions = {
             }
         }
     },
-
-    /* likes: (token, ) => {
-        return async (dispatch, getState) => {
-            //Le pido al backend que me valide el token
-            try {
-                let response = await axios.get('http://localhost:4000/api/likes', {
-                headers: {
-                    Authorization: 'Bearer ' + token,
-                },
-            })
-            return response.data.response
-            } catch(error) {
-                console.log(error)
-
-            }
-        }
-    }, */
-
-    /* addComment: (id, comment) => {
-        return async () => {
-            try {
-                let response = await axios.post('http://localhost:4000/api/comments/' + id, comment, {
-                headers: {
-                    Authorization: 'Bearer ' + input.token,
-                },
-            })
-            return response.data.response
-            } catch(error) {
-                console.log(error)
-            }
-        }
-    }, */
-
     
 }
 

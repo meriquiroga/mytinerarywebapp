@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const usersActions = {
     logIn: (userInfo) => {
         return async (dispatch, getState) => {
-            let response = await axios.post('http://localhost:4000/api/user/login', {...userInfo})
+            let response = await axios.post('https://mytinerarywebapp.herokuapp.com/api/user/login', {...userInfo})
             if (!response.data.success) {
                 throw response
             }
@@ -15,7 +15,7 @@ const usersActions = {
 
     signUp: (userInfo) => {
         return async (dispatch, getState) => {
-            let response = await axios.post('http://localhost:4000/api/user/signup', {...userInfo})
+            let response = await axios.post('https://mytinerarywebapp.herokuapp.com/api/user/signup', {...userInfo})
             if (!response.data.success) {
                 throw response
             }
@@ -43,7 +43,7 @@ const usersActions = {
         return async (dispatch, getState) => {
             //Le pido al backend que me valide el token
             try {
-                let response = await axios.get('http://localhost:4000/api/verifyToken', {
+                let response = await axios.get('https://mytinerarywebapp.herokuapp.com/api/verifyToken', {
                 headers: {
                     Authorization: 'Bearer ' + token,
                 },

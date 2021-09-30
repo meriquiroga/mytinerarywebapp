@@ -114,7 +114,7 @@ const LogIn = (props) => {
                 <button onClick={formSubmit}>LOG IN</button>
                 
                 <GoogleLogin
-                  clientId="90360483035-rg0gb8c9obostvf4h7e77inh1p1hrh2f.apps.googleusercontent.com"
+                  clientId="90360483035-c7utevr36kmf56slherbvjikj3g594pl.apps.googleusercontent.com"
                   buttonText="Log in with Google"
                   onSuccess={responseGoogle}
                   onFailure={responseGoogle}
